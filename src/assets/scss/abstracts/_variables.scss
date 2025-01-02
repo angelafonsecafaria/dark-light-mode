@@ -1,0 +1,23 @@
+// Definindo as cores padrão (Light Mode)
+$light-background-color: color(white, 100);
+$light-text-color: #333333;
+$light-primary-color: #3498db;
+$light-secondary-color: #2ecc71;
+
+// Definindo as cores para o Dark Mode
+$dark-background-color: #2c3e50;
+$dark-text-color: #ecf0f1;
+$dark-primary-color: #3498db;
+$dark-secondary-color: #2ecc71;
+
+// Definindo a cor de fundo geral (base)
+$background-color: $light-background-color;
+$text-color: $light-text-color;
+$primary-color: $light-primary-color;
+$secondary-color: $light-secondary-color;
+
+// Definindo a cor de fundo quando o modo escuro estiver ativado
+$dark-background-color: $dark-background-color;
+$dark-text-color: $dark-text-color;
+$dark-primary-color: $dark-primary-color;
+$dark-secondary-color: $dark-secondary-color;

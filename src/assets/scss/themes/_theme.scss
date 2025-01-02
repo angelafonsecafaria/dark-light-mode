@@ -1,0 +1,24 @@
+@import './_light-theme.scss';
+@import './_dark-theme.scss';
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+
+    .primary {
+        color: var(--primary-color);
+    }
+
+    .secondary {
+        color: var(--secondary-color);
+    }
+
+    .button-primary {
+        background-color: var(--primary-color);
+    }
+
+    .button-secondary {
+        background-color: var(--secondary-color);
+    }
+}

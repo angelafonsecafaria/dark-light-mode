@@ -1,0 +1,17 @@
+// Importando os arquivos de configuração
+@import './abstracts/_variables.scss';
+@import './abstracts/_colors.scss';
+
+
+// Importando os arquivos de tema
+@import './themes/_theme.scss'; // Esse arquivo mescla Light e Dark Mode
+
+// Arquivos base
+@import './base/_reset.scss';
+@import './base/_typography.scss';
+
+// Arquivos de layout
+
+// Arquivos de componentes
+
+// Arquivos de páginas

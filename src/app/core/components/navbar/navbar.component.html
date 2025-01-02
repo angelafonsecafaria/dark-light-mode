@@ -1,0 +1,70 @@
+<nav class="navbar">
+    <div class="navbar__logo">
+        <img [src]="isDarkTheme ? 'assets/icons/logo-dark.png' : 'assets/icons/logo.png'" alt="Logo" />
+    </div>
+
+    <!-- Menu de navegação (Visível no desktop) -->
+    <ul class="navbar__menu">
+        <li><a routerLink="/about">Sobre</a></li>
+        <li><a routerLink="/Licitações">Licitações</a></li>
+        <li><a routerLink="/contact">Contato</a></li>
+    </ul>
+
+    <div class="navbar__menu">
+        <ul>
+            <!-- Outras opções de menu -->
+            <li class="color-picker">
+                <label for="color-select">Escolha uma cor:</label>
+                <select id="color-select" (change)="updateSecondaryColor($event)">
+                    <option value="#6c757d">Cinza</option>
+                    <option value="#ff5733">Laranja</option>
+                    <option value="#33c1ff">Azul</option>
+                    <option value="#28a745">Verde</option>
+                    <option value="#e83e8c">Rosa</option>
+                </select>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Ações de dropdown (Perfil e Cadastre-se) -->
+    <div class="navbar__actions">
+        <div class="navbar__dropdown" [ngClass]="{ active: isActive('perfil') }" (click)="toggleDropdown('perfil')">
+            <button class="dropdown__toggle button-secondary">
+                Perfil
+            </button>
+            <ul class="dropdown__menu">
+                <li><a href="#">Perfil</a></li>
+                <li><a href="#">Configurações</a></li>
+                <li><a href="#" (click)="toggleDarkMode()">Dark/Light</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="navbar__dropdown" [ngClass]="{ active: isActive('cadastro') }" (click)="toggleDropdown('cadastro')">
+            <button class="dropdown__toggle register button-primary">
+                Cadastre-se
+            </button>
+            <ul class="dropdown__menu">
+                <li><a href="#">Cadastro</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Botão de Menu (aparece no mobile) -->
+
+    <!-- Dropdown de Menu no Mobile -->
+    <div class="navbar__dropdown navbar__mobile__menu" [ngClass]="{ active: isActive('menu') }"
+        (click)="toggleDropdown('menu')">
+        <button class="dropdown__toggle button-primary">Menu</button>
+        <ul class="dropdown__menu">
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Licitações</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Perfil</a></li>
+            <li><a href="#" (click)="toggleDarkMode()">Dark/Light</a></li>
+            <li><a href="#">Configurações</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,40 @@
+/* Reset para garantir consistência entre navegadores */
+
+/* Normaliza o box-sizing para todos os elementos */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Remover o comportamento padrão do navegador em listas */
+ul,
+ol {
+    padding: 0;
+    list-style: none;
+}
+
+/* Remover a decoração de links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remover bordas e margens em tabelas */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Normaliza o comportamento de imagens */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Definir a altura da linha no body */
+body {
+    line-height: 1.6;
+}
