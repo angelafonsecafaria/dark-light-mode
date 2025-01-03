@@ -1,6 +1,7 @@
 <nav class="navbar">
     <div class="navbar__logo">
-        <img [src]="isDarkTheme ? 'assets/icons/logo-dark.png' : 'assets/icons/logo.png'" alt="Logo" />
+        <img routerLink="/home" [src]="isDarkTheme ? 'assets/icons/logo-dark.png' : 'assets/icons/logo.png'"
+            alt="Logo" />
     </div>
 
     <!-- Menu de navegação (Visível no desktop) -->
@@ -35,7 +36,7 @@
             <ul class="dropdown__menu">
                 <li><a href="#">Perfil</a></li>
                 <li><a href="#">Configurações</a></li>
-                <li><a href="#" (click)="toggleDarkMode()">Dark/Light</a></li>
+                <li><a (click)="toggleDarkMode()">Dark/Light</a></li>
                 <li><a href="#">Logout</a></li>
             </ul>
         </div>
@@ -45,8 +46,8 @@
                 Cadastre-se
             </button>
             <ul class="dropdown__menu">
-                <li><a href="#">Cadastro</a></li>
-                <li><a href="#">Login</a></li>
+                <li><a routerLink="/register">Cadastro</a></li>
+                <li><a routerLink="/login">Login</a></li>
             </ul>
         </div>
     </div>
